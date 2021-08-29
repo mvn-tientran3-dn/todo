@@ -1,0 +1,41 @@
+header {
+  background-color: #E7E9EB;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  h1{
+    font: normal 4em 'Playfair Display SC', serif;
+    text-align: center;
+    margin-top: 0;
+    padding: 10px;
+  }
+  nav {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      flex-grow: 1;
+      text-align: center;
+      padding: 1em;
+      text-decoration: none;
+      color: #000000;
+    }
+    a:hover{
+      color: #f37c8e;
+      font-weight: bold;
+    }
+  }
+  .info {
+    margin: auto;
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+    a:hover{
+      color: #f37c8e;
+      font-weight: bold;
+    }
+  }
+
+}

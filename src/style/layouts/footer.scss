@@ -1,0 +1,17 @@
+footer{
+  background-color: #E7E9EB;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  #copyright {
+    text-align: center;
+    font: normal 20px 'Playfair Display SC', serif;
+  }
+  #owner {
+    text-align: center;
+    padding: 20px 0 0px;
+    font: normal 20px 'Playfair Display SC', serif;
+    a {
+      color: rgba(0, 0, 0, 0.99);
+    }
+  }
+}

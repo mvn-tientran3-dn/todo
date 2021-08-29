@@ -1,0 +1,26 @@
+.col-12 {
+  width: 100%;
+}
+.col-4 {
+  width: 33.3%;
+}
+
+.col-8 {
+  width: 66.6%;
+}
+
+.intro {
+  margin: 30px 0px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.listItems {
+  text-align: center;
+  min-width: 40%;
+  list-style: none;
+
+  ul {
+    list-style: none;
+  }
+}
