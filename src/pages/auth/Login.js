@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import {useHistory} from 'react-router-dom'
+import {Redirect, useHistory} from 'react-router-dom'
 import '../../style/pages/auth/login.scss';
 
 const Login = () => {
@@ -9,6 +9,10 @@ const Login = () => {
     });
     const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') ?? '');
     const history = useHistory();
+
+    if (loggedIn !== '') {
+        return <Redirect to="/" />
+    }
 
     const handleChange = (e) => {
         const target = e.target;

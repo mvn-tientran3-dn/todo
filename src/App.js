@@ -7,7 +7,6 @@ import './App.scss';
 import Index from "./pages";
 
 function App() {
-    localStorage.setItem('todoList', JSON.stringify([]));
   return (
     <Router>
         <div className="container">

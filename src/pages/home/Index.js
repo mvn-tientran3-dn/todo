@@ -11,7 +11,7 @@ const Index = () => {
     const [update, setUpdate] = useState(0);
     const [todo, setTodo] = useState(JSON.parse(localStorage.getItem('todoList')) ?? []);
     const isUpdate = false;
-    // localStorage.setItem('todoList', JSON.stringify(todo));
+
 
     const handleAdd = (form) => {
         id = id + 1;
@@ -30,6 +30,10 @@ const Index = () => {
         newArr[index] = {...newArr[index], isUpdate: true};
         setTodo(newArr);
     }, [update]);
+
+    useEffect(() => {
+        localStorage.setItem('todoList', JSON.stringify(todo));
+    }, [todo]);
 
     const handleUpdate = (item) => {
         let index = todo.findIndex((todo => todo.id === item.id));

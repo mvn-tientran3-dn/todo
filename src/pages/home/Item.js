@@ -9,19 +9,6 @@ const Item = (props) => {
         props.updateList(obj)
     }
 
-    // const handleEdit = (id) => {
-    //     console.log(id);
-    //     setUpdate(id);
-    // }
-    //
-    // // handle display data edit
-    // useEffect(() => {
-    //     // let index = item.findIndex((home => home.id === update));
-    //     let newArr = [...item];
-    //     newArr.isUpdate = true;
-    //     setItem(newArr);
-    // }, [update]);
-
     return (
         <Fragment>
             <div className="todo">
