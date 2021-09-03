@@ -11,7 +11,6 @@ const Main = () => {
                 <NavLink exact activeStyle={{color: '#f37c8e', fontWeight: 'bold'}} to="/">Home</NavLink>
                 <NavLink activeStyle={{color: '#f37c8e', fontWeight: 'bold'}} to="/todo">List</NavLink>
                 <NavLink activeStyle={{color: '#f37c8e', fontWeight: 'bold'}} to="/account">Account</NavLink>
-                <a>Fourth tab</a>
             </nav>
             <div className="info">
                 <NavLink activeStyle={{color: '#f37c8e', fontWeight: 'bold'}} to="/login">Login</NavLink>

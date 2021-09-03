@@ -1,27 +1,31 @@
-import React, {Fragment, useState} from 'react';
-import List from './List';
-import Add from './Add';
-import '../../style/pages/todo/index.scss';
-import Error from '../../components/messages/Error'
+import React, {Fragment} from 'react';
+import '../../style/pages/todo/todo.scss';
+import Item from "./Item";
 
 const Index = () => {
-    const isLogin = 1;
-    const errorMsg = 'Vui long login';
+    const todo = JSON.parse(localStorage.getItem('todoList'));
 
     return (
         <Fragment>
-            {
-                isLogin
-                    ? <div className="row">
-                        <div className="col-4">
-                            <Add/>
-                        </div>
-                        <div className="col-8">
-                            <List/>
-                        </div>
+            <div className="row">
+                <div className="intro col-12">
+                    <h1>Work To-Dos</h1>
+                    <div>
+                        <div className="border1"></div>
                     </div>
-                    : <Error msg={errorMsg}/>
-            }
+                </div>
+            </div>
+            <div className="row">
+                <div className="list-work col-12">
+                    {
+                        todo.map((e,index) => (
+                            <Item key={index}
+                                  item={e}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
         </Fragment>
     );
 }

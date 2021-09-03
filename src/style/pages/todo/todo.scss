@@ -1,0 +1,23 @@
+.list-work{
+  display: flex;
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .item {
+    padding: 20px;
+    background-color: rgb(246, 225, 225);
+    margin-right: 25px;
+    border-radius: 30px;
+
+    .title {
+      text-align: center;
+    }
+    .detail{
+      margin-top: 25px;
+      color: #ff445f;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,11 +1,13 @@
+@import 'scss/variables.scss';
+
 header {
-  background-color: #E7E9EB;
+  background-color: $white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   h1{
     font: normal 4em 'Playfair Display SC', serif;
-    text-align: center;
+    text-align: $text-align-center;
     margin-top: 0;
     padding: 10px;
   }
@@ -16,26 +18,25 @@ header {
     flex-wrap: wrap;
     a {
       flex-grow: 1;
-      text-align: center;
-      padding: 1em;
-      text-decoration: none;
-      color: #000000;
+      text-align: $text-align-center;
+      padding: 3em;
+      text-decoration: $text-decoration-none;
+      color: $black;
     }
     a:hover{
-      color: #f37c8e;
-      font-weight: bold;
+      color: $pink-hover;
+      font-weight: $font-weight-bold;
     }
   }
   .info {
     margin: auto;
     a {
-      text-decoration: none;
-      color: #000000;
+      text-decoration: $text-decoration-none;
+      color: $black;
     }
     a:hover{
-      color: #f37c8e;
-      font-weight: bold;
+      color: $pink-hover;
+      font-weight: $font-weight-bold;
     }
   }
-
 }
