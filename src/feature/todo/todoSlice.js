@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const todoSlice = createSlice({
     name: 'counter',
     initialState: {
-        todo: [],
+        todo: JSON.parse(localStorage.getItem('todoList')) ?? [],
         itemShow: 0,
         loggedIn: localStorage.getItem('loggedIn') ?? '',
     },

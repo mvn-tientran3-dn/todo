@@ -38,6 +38,9 @@ const Login = () => {
                 <form id="login-form">
                     <h1>Login</h1>
                     <div className="field-block">
+                        <span className="note">*Nhập tuỳ ý*</span>
+                    </div>
+                    <div className="field-block">
                         <div><label>Email address</label></div>
                         <input type="email"
                                className="email"

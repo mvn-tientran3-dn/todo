@@ -2,21 +2,19 @@ import React, {Fragment, useEffect} from 'react';
 import List from '../home/List';
 import Add from '../home/Add';
 import '../../style/pages/home/index.scss';
-import Error from '../../components/messages/Error'
 import {useDispatch, useSelector} from "react-redux";
 import {add, deleteAction, edit, show, update} from "../../feature/todo/todoSlice";
 
-let id = 0;
 const Index = () => {
     const todo = useSelector((state) => state.todoList.todo); // state.teen cuar reducer.teen state
     const itemShow = useSelector((state) => state.todoList.itemShow); // state.teen cuar reducer.teen state
     const dispatch = useDispatch();
+    let id = todo.length;
     // useEffect(() => {
     //     console.log(itemShow);
     // }, [itemShow]);
 
-    const isLogin = 1;
-    const errorMsg = 'Vui long login';
+    // const isLogin = 1;
     const isUpdate = false;
 
     /**
@@ -78,22 +76,18 @@ const Index = () => {
 
     return (
         <Fragment>
-            {
-                isLogin
-                    ? <div className="row">
-                        <div className="col-4">
-                            <Add add={handleAdd}/>
-                        </div>
-                        <div className="col-8">
-                            <List todo={todo}
-                                  edit={handleEdit}
-                                  update={handleUpdate}
-                                  delete={handleDelete}
-                            />
-                        </div>
+            <div className="row">
+                    <div className="col-4">
+                        <Add add={handleAdd}/>
                     </div>
-                    : <Error msg={errorMsg}/>
-            }
+                    <div className="col-8">
+                        <List todo={todo}
+                              edit={handleEdit}
+                              update={handleUpdate}
+                              delete={handleDelete}
+                        />
+                    </div>
+                </div>
         </Fragment>
     );
 }

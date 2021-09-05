@@ -10,8 +10,12 @@
   .field-block {
     width: 30%;
     margin: 30px auto;
+    .note {
+      color: #c2221b;
+      font-size: 14px;
+    }
     input {
-      width: 100%;
+      width: 95%;
       height: 30px
     }
     input[type=submit] {
@@ -25,6 +29,7 @@
       margin: 1.5px;
       border-radius: 18px;
       align-items: center;
+      border:1px solid #cccccc
     }
     input[type=submit]:hover {
       background :#b7b5b5;

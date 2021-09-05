@@ -1,20 +1,30 @@
-.list-work{
+.list-work {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0;
 
   .col-3 {
     width: 25%;
   }
 
   .item {
-    padding: 20px;
-    background-color: rgb(246, 225, 225);
-    margin-right: 25px;
+    padding: 30px;
+    background-color: #f6e1e1;
+    margin: 15px;
     border-radius: 30px;
 
     .title {
       text-align: center;
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #000000;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
     }
-    .detail{
+    .detail {
       margin-top: 25px;
       color: #ff445f;
       line-height: 24px;
