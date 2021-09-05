@@ -1,13 +1,16 @@
 import React, {Fragment, useState} from 'react';
 import {Redirect, useHistory} from 'react-router-dom'
 import '../../style/pages/auth/login.scss';
+import {useDispatch, useSelector} from "react-redux";
+import {login} from "../../feature/todo/todoSlice";
 
 const Login = () => {
     const [form, setForm] = useState({
         email: '',
         password: '',
     });
-    const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') ?? '');
+    const loggedIn = useSelector((state) => state.todoList.loggedIn);
+    const dispatch = useDispatch();
     const history = useHistory();
 
     if (loggedIn !== '') {
@@ -25,8 +28,7 @@ const Login = () => {
         event.preventDefault();
         let info = {...form};
         if (info.email !== '' && info.password !== '') {
-            localStorage.setItem('loggedIn', info.email);
-            setLoggedIn(info.email);
+            dispatch(login(info.email));
             history.push('/');
         }
     }
