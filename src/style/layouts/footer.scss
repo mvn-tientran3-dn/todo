@@ -1,0 +1,17 @@
+@import 'scss/variables';
+
+footer{
+  background-color: $white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  #copyright, #owner {
+    text-align: $text-align-center;
+    font: normal 20px 'Playfair Display SC', serif;
+  }
+  #owner {
+    padding: 20px 0 0px;
+    a {
+      color: $black;
+    }
+  }
+}

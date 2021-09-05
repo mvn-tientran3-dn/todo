@@ -1,0 +1,13 @@
+//@import 'style/scss/variables';
+
+.container {
+  //background-color: #E7E9EB;
+  width: 100%;
+  overflow: auto;
+  top: 144px;
+  bottom: 0;
+  height: auto;
+  main {
+    min-height: 500px;
+  }
+}

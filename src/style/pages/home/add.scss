@@ -1,0 +1,36 @@
+.form-add-todo {
+  display: inline-block;
+  align-items: center;
+
+  input, button {
+    outline: none; /* removes the outline of placeholder */
+    padding: 10px;
+    font-size: 26px;
+    border:2px;
+      background: rgb(246, 225, 225);
+    border-radius: 17px;
+    margin: 10px;
+  }
+  input{
+    border: 5px;
+    padding: 10px;
+  }
+  button {
+    color: #f37c8e;
+    background: rgb(246, 225, 225);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  button:hover{
+    background :#b7b5b5 ;
+    color: white;
+  }
+
+  input::placeholder{
+    color: #010101;
+    padding: 7px;
+    margin: 7px;
+    border: 2px;
+    font-size: 20px;
+  }
+}

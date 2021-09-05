@@ -1,0 +1,31 @@
+.todo{
+  margin-block-end: 0.5rem;
+  background: #f6e1e1;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 18px;
+  transition: all 0.5s ease;
+  li{
+    flex: 1;
+    padding: 9px;
+    margin: 1px;
+    text-align: left;
+  }
+  .trash-btn, .edit-todo-btn {
+    background: #f37c8e;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1.5px;
+    border-radius: 18px;
+  }
+  button:hover{
+    background :#b7b5b5;
+    color: white;
+  }
+}

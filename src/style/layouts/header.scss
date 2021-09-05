@@ -1,0 +1,42 @@
+@import 'scss/variables.scss';
+
+header {
+  background-color: $white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  h1{
+    font: normal 4em 'Playfair Display SC', serif;
+    text-align: $text-align-center;
+    margin-top: 0;
+    padding: 10px;
+  }
+  nav {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      flex-grow: 1;
+      text-align: $text-align-center;
+      padding: 3em;
+      text-decoration: $text-decoration-none;
+      color: $black;
+    }
+    a:hover{
+      color: $pink-hover;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .info {
+    margin: auto;
+    a {
+      text-decoration: $text-decoration-none;
+      color: $black;
+    }
+    a:hover{
+      color: $pink-hover;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
