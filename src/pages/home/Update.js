@@ -1,16 +1,20 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import '../../style/pages/home/update.scss';
 
 const Update = (props) => {
     let {item} = props;
     const [todoUpdate, setTodoUpdate] = useState(item);
 
+    useEffect(() => {
+        setTodoUpdate(item);
+    }, [item]);
+
     const handleChange = (e) => {
         const target = e.target;
         let name = target.name;
         let value = target.value;
         setTodoUpdate({...todoUpdate, [name]: value});
-    }
+    };
 
     const onUpdate = (e) => {
         e.preventDefault();
