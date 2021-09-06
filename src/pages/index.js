@@ -1,4 +1,4 @@
-import React, {Fragment, useState}  from "react";
+import React, {Fragment}  from "react";
 import {Switch, Route} from "react-router-dom";
 import Home from "./home/Index";
 import Login from "./auth/Login";
@@ -6,6 +6,7 @@ import Account from "./account/Index";
 import Todo from "./todo/Index";
 import Detail from "./todo/Detail";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import {useSelector} from "react-redux";
 
 const routes = [
     {
@@ -33,10 +34,8 @@ const routes = [
     }
 ];
 
-const token = localStorage.getItem('loggedIn') ?? '';
-
 const Index = () => {
-    const [loggedIn, setLoggedIn] = useState(token);
+    const loggedIn = useSelector((state => state.todoList.loggedIn));
 
     return  <Fragment>
         <Switch>

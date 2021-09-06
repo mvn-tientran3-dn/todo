@@ -29,18 +29,22 @@ const List = (props) => {
             </div>
             <div className="row">
                 <div className="listItems col-12">
-                    <ul className="">
-                        {
-                            todo.map((e,index) => (
-                                <Item key={index}
-                                      todo={e}
-                                      onEdit={handleEdit}
-                                      updateList={handleUpdate}
-                                      onDelete={handleDelete}
-                                />
-                            ))
-                        }
-                    </ul>
+                    {
+                        todo.length
+                            ? <ul className="">
+                                {
+                                    todo.map((e, index) => (
+                                        <Item key={index}
+                                              todo={e}
+                                              onEdit={handleEdit}
+                                              updateList={handleUpdate}
+                                              onDelete={handleDelete}
+                                        />
+                                    ))
+                                }
+                            </ul>
+                            : <p>Bạn chưa có công việc nào.</p>
+                    }
                 </div>
             </div>
         </Fragment>

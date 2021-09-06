@@ -1,9 +1,10 @@
 import React  from "react";
 import {useParams} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 const Detail = (props) => {
     const {id} = useParams();
-    const todo = JSON.parse(localStorage.getItem('todoList'));
+    const todo = useSelector((state => state.todoList.todo));
     let index = todo.findIndex((todo => todo.id === parseInt(id)));
 
     return <div className="row">

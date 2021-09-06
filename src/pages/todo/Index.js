@@ -1,9 +1,10 @@
 import React, {Fragment} from 'react';
 import '../../style/pages/todo/todo.scss';
 import Item from "./Item";
+import {useSelector} from "react-redux";
 
 const Index = () => {
-    const todo = JSON.parse(localStorage.getItem('todoList'));
+    const todo = useSelector((state => state.todoList.todo));
 
     return (
         <Fragment>

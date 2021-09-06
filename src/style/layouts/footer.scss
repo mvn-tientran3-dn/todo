@@ -4,12 +4,10 @@ footer{
   background-color: $white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   padding: 1em;
-  #copyright, #owner {
+  #owner {
     text-align: $text-align-center;
     font: normal 20px 'Playfair Display SC', serif;
-  }
-  #owner {
-    padding: 20px 0 0px;
+    padding: 20px 0 40px;
     a {
       color: $black;
     }
