@@ -9,10 +9,14 @@ const Index = () => {
     const todo = useSelector((state) => state.todoList.todo); // state.teen cuar reducer.teen state
     const itemShow = useSelector((state) => state.todoList.itemShow); // state.teen cuar reducer.teen state
     const dispatch = useDispatch();
-    let id = todo.length;
-    // useEffect(() => {
-    //     console.log(itemShow);
-    // }, [itemShow]);
+    const guid = () => {
+        const s4 = () => {
+            return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+        };
+        return `${s4()}-${s4()}-${s4()}-${s4()}`;
+    };
 
     // const isLogin = 1;
     const isUpdate = false;
@@ -23,8 +27,7 @@ const Index = () => {
      * @param form
      */
     const handleAdd = (form) => {
-        id = id + 1;
-        let item = {...form, id : id, isUpdate : isUpdate};
+        let item = {...form, id : guid(), isUpdate : isUpdate};
         dispatch(add(item));
     }
 
