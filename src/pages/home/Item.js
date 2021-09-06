@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {Fragment} from 'react';
 import '../../style/pages/home/item.scss';
 import Update from "./Update";
 
