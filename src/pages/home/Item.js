@@ -7,7 +7,7 @@ const Item = (props) => {
 
     const onUpdate = (obj) => {
         props.updateList(obj)
-    }
+    };
 
     return (
         <Fragment>
@@ -22,10 +22,10 @@ const Item = (props) => {
                         ? ''
                         : <button className="edit-todo-btn" onClick={ () => props.onEdit(todo.id) }><i className="fas fa-edit"></i></button>
                 }
-                <button className="trash-btn" onClick={() =>props.onDelete(todo.id)}><i className="fas fa-trash"></i></button>
+                <button className="trash-btn" onClick={() => props.onDelete(todo.id)}><i className="fas fa-trash"></i></button>
             </div>
         </Fragment>
     );
-}
+};
 
 export default Item;

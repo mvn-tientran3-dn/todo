@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 const Detail = (props) => {
     const {id} = useParams();
     const todo = useSelector((state => state.todoList.todo));
-    let index = todo.findIndex((todo => todo.id === parseInt(id)));
+    let index = todo.findIndex((todo => todo.id === id));
 
     return <div className="row">
         <div className="col-12">

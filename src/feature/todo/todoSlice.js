@@ -25,9 +25,7 @@ export const todoSlice = createSlice({
             state.todo = newTodo;
         },
         deleteAction: (state, action) => {
-            let listTodo = state.todo;
-
-            state.todo  = listTodo.filter(todo => todo.id !== action.payload);
+            state.todo  = [...state.todo].filter(todo => todo.id !== action.payload);
         },
         show: (state, action) => {
             state.itemShow = action.payload;
@@ -40,7 +38,8 @@ export const todoSlice = createSlice({
             state.loggedIn = action.payload;
         },
         logout: (state) => {
-            localStorage.setItem('loggedIn', '');
+            localStorage.removeItem('loggedIn');
+            localStorage.removeItem('todoList');
             state.loggedIn = '';
         }
     },
